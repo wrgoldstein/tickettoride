@@ -3,3 +3,4 @@ class Ticket:
         self.from_city = from_city
         self.to_city = to_city
         self.points = int(points)
+        self.satisfied = False

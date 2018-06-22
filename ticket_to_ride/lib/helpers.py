@@ -48,6 +48,7 @@ def bfs_paths(graph, start, goal, max_length=6):
                 queue.append((next, path + [next]))
 
 distances = dict([(city, bfs(RouteGraph, city)) for city in cities])
+
 def distance(from_city, to_city):
     return distances[from_city][to_city]
         

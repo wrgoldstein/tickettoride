@@ -1,5 +1,5 @@
 from copy import deepcopy
-from helpers import *
+from helpers import shuffled
 
 class TrainDeck(object):
     def __init__(self):
@@ -10,13 +10,17 @@ class TrainDeck(object):
         self.cards = shuffled(self.cards + self.discards)
         self.discards = []
         
-    def deal(self, n):
+    def deal(self, player, n):
         if n > len(self.cards):
-            self.shuffle()  # simplification
-        return [self.cards.pop() for _ in range(n)]
+            self.shuffle()
+        player.trains += [self.cards.pop() for _ in range(n)]
+        return True
 
     def stats(self):
         return {
             'cards': len(self.cards),
             'discards': len(self.discards)
         }
+
+    def cards_left(self):
+        return len(self.cards) + len(self.discards)

@@ -1,18 +1,18 @@
-from data import *
+from data import tickets
 from copy import deepcopy
-from helpers import *
+from random import shuffle
 
 class TicketDeck(object):
-    cards = tickets
+    tickets = deepcopy(tickets)
 
     def __init__(self):
-        self.cards = deepcopy(TicketDeck.cards)
+        self.tickets = deepcopy(TicketDeck.tickets)
     
     def deal(self, n):
-        return [self.cards.pop(0) for _ in range(n)]
+        return [self.tickets.pop(0) for _ in range(n)]
 
-    def accept(self, cards):
-    	self.cards += cards
+    def accept(self, tickets):
+    	self.tickets += tickets
 
     def shuffle(self):
-        self.cards = shuffled(self.cards)
+        shuffle(self.tickets)

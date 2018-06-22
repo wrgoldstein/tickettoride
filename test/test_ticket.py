@@ -7,6 +7,6 @@ def test_ticket():
 		Route('Seattle', 'Portland', 1, '-'),
 		Route('San Francisco', 'Los Angeles', 1, '-')
 	]
-	print "\n\n\n"
+
 	assert helpers.satisfied(Ticket('Vancouver', 'Portland', 10), routes) == True
 	assert helpers.satisfied(Ticket('Vancouver', 'Los Angeles', 10), routes) == False

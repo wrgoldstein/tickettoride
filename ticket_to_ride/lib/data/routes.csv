@@ -11,9 +11,9 @@ San Francisco,Salt Lake City,5,ow
 Los Angeles,Las Vegas,2,-
 Los Angeles,Phoenix,3,-
 Los Angeles,El Paso,6,k
-Calgary,Winnepeg,6,w
+Calgary,Winnipeg,6,w
 Calgary,Helena,4,-
-Helena,Winnepeg,4,b
+Helena,Winnipeg,4,b
 Helena,Duluth,6,o
 Helena,Omaha,5,r
 Helena,Denver,4,g
@@ -23,8 +23,8 @@ Salt Lake City,Las Vegas,3,o
 Phoenix,Denver,4,w
 Phoenix,Santa Fe,3,-
 Phoenix,El Paso,3,-
-Winnepeg,Sault St. Marie,6,-
-Winnepeg,Duluth,4,k
+Winnipeg,Sault St. Marie,6,-
+Winnipeg,Duluth,4,k
 Denver,Omaha,2,-
 Denver,Kansas City,2,-
 Denver,Oklahoma City,2,-
