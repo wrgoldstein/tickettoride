@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from itertools import chain
+from itertools import chain, izip_longest
 
 from data import Route, routes, Ticket, tickets, cities
 
@@ -11,6 +11,12 @@ def defaultmax(L):
     if len(L):
         return max(L)
     return 0
+
+def grouper(n, iterable, fillvalue=None):
+    "grouper(3, 'ABCDEFG', 'x') --> ABC DEF Gxx"
+    args = [iter(iterable)] * n
+    return filter(lambda a: None not in a, izip_longest(fillvalue=fillvalue, *args))
+
 
 RouteGraph = dict()
 for city in cities:

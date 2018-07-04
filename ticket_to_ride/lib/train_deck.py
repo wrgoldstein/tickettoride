@@ -10,11 +10,10 @@ class TrainDeck(object):
         self.cards = shuffled(self.cards + self.discards)
         self.discards = []
         
-    def deal(self, player, n):
+    def deal(self, n):
         if n > len(self.cards):
             self.shuffle()
-        player.trains += [self.cards.pop() for _ in range(n)]
-        return True
+        return [self.cards.pop() for _ in range(n)]
 
     def stats(self):
         return {

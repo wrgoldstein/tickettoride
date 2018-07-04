@@ -2,14 +2,18 @@ from ticket_to_ride import TicketToRide, Player, DefaultStrategy
 
 def test_no_reuse_of_train_deck():
 	game1 = TicketToRide()
-	Player(DefaultStrategy).sit(game1)
-	Player(DefaultStrategy).sit(game1)
-	game1.train_deck.deal(30)
+	player1 = Player(DefaultStrategy)
+	player2 = Player(DefaultStrategy)
+	player1.sit(game1)
+	player2.sit(game1)
+	game1.train_deck.deal(player1, 30)
 
 	game2 = TicketToRide()
-	Player(DefaultStrategy).sit(game2)
-	Player(DefaultStrategy).sit(game2)
-	game1.train_deck.deal(30)
+	player1 = Player(DefaultStrategy)
+	player2 =Player(DefaultStrategy)
+	player1.sit(game2)
+	player2.sit(game2)
+	game1.train_deck.deal(player1, 30)
 
 	assert len(game1.train_deck.cards) != len(game2.train_deck.cards)
 
